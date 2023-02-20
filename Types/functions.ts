@@ -40,3 +40,37 @@ function Random(num: number): number | string {
 const add = (x: number, y: number): number => {
   return x + y;
 };
+
+// Anonymous functions
+
+const colors = ["green", "yellow", "red"];
+
+colors.forEach((color: string) => {
+  return color.toUpperCase();
+});
+
+// Void Return types
+
+const annoyUser = (num: number): void => {
+  for (let i = 0; i < num; i++) {
+    console.log("hey");
+  }
+};
+
+annoyUser(3);
+
+// Never
+
+const neverStop = (): never => {
+  while (true) {
+    console.log("hey");
+  }
+};
+
+// neverStop();
+
+const throwError = (msg: string): never => {
+  throw new Error(msg);
+};
+
+// throwError("Something went Wrong !");
